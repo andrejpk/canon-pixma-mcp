@@ -1,0 +1,47 @@
+{
+  "name": "canon-pixma-mcp",
+  "version": "0.1.0",
+  "description": "MCP server to inspect and maintain Canon PIXMA (PRO-100 and similar) inkjet printers over the LAN: ink, errors, counters, settings, nozzle check, cleaning. Tiered access levels.",
+  "type": "module",
+  "bin": {
+    "canon-pixma-mcp": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "tsc",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test test/decode.test.mjs test/server.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "canon",
+    "pixma",
+    "printer",
+    "bjnp",
+    "ink"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrejpk/canon-pixma-mcp.git"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.6.0"
+  }
+}
